@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肖志伟的建筑日常</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <style>
+        /* 自定义样式 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        .welcome-banner {
+            height: 100vh;
+            background: url('path/to/your/background-image.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .swiper {
+            width: 100%;
+            height: auto; /* 改为自适应高度 */
+            margin-bottom: 20px; /* 添加一些底部间距 */
+        }
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* 确保图片完整显示 */
+        }
+        .swiper-slide p {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .chat-window {
+            height: 400px;
+            overflow-y: auto;
+        }
+        .message {
+            max-width: 70%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .user-message {
+            background-color: #e6e6e6;
+            align-self: flex-start;
+        }
+        .ai-message {
+            background-color: #d1ecf1;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">肖志伟的建筑日常</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">关于我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#chat">对话</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">联系</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 欢迎横幅 -->
+    <header class="welcome-banner">
+        <h1 class="display-4">欢迎来到肖志伟的建筑日常</h1>
+    </header>
+
+    <!-- 照片轮播 -->
+    <section class="swiper mySwiper">
+        <div class="swiper-wrapper" id="swiperWrapper">
+            <!-- 幻灯片将通过 JavaScript 动态添加 -->
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </section>
+
+    <!-- 个人简介 -->
+    <section id="about" class="container my-5">
+        <h2>关于我</h2>
+        <p>这里是您的个人简介，包括兴趣、爱好、专业领域等信息。</p>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="portfolio" class="container my-5">
+        <h2>作品集</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="path/to/work1.jpg" class="card-img-top" alt="作品1">
+                    <div class="card-body">
+                        <h5 class="card-title">作品1</h5>
+                        <p class="card-text">作品1的简短描述。</p>
+                        <a href="#" class="btn btn-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 添加更多作品... -->
+        </div>
+    </section>
+
+    <!-- 对话界面 -->
+    <section id="chat" class="container my-5">
+        <h2>与我对话</h2>
+        <div class="chat-window border rounded p-3 mb-3">
+            <!-- 对话内容将在这里动态添加 -->
+        </div>
+        <div class="input-group">
+            <input type="text" id="user-input" class="form-control" placeholder="输入您的消息...">
+            <button class="btn btn-primary" type="button" id="send-button">发送</button>
+        </div>
+    </section>
+
+    <!-- 社交媒体链接 -->
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 肖志伟的建筑日常. 保留所有权利。</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="me-3"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-wechat"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-github"></i></a>
+                    <!-- 添加更多社交媒体图标... -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        // 动态生成幻灯片
+        const imagePath = './images/'; // 使用相对路径
+        const imageNames = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // 列出实际的图片文件名
+
+        const swiperWrapper = document.getElementById('swiperWrapper');
+
+        imageNames.forEach((imageName, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide';
+            
+            const img = document.createElement('img');
+            img.src = imagePath + imageName;
+            img.alt = `未来美城照片${index + 1}`;
+            
+            // 添加错误处理
+            img.onerror = function() {
+                console.error(`无法加载图片: ${this.src}`);
+                this.src = 'path/to/placeholder-image.jpg'; // 替换为一个占位图片的路径
+            };
+            
+            const p = document.createElement('p');
+            p.textContent = `未来美城项目展示${index + 1}`;
+            
+            slide.appendChild(img);
+            slide.appendChild(p);
+            swiperWrapper.appendChild(slide);
+        });
+
+        // 输出图片路径到控制台
+        console.log('图片路径:', imagePath);
+        console.log('图片名称:', imageNames);
+
+        // 初始化Swiper
+        new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true, // 使分页可点击
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoHeight: true, // 自动调整高度
+            spaceBetween: 30, // 幻灯片之间的间距
+            centeredSlides: true, // 居中显示当前幻灯片
+            loop: true, // 循环播放
+            autoplay: {
+                delay: 3000, // 自动播放间隔，单位毫秒
+                disableOnInteraction: false, // 用户操作后不停止自动播放
+            },
+        });
+
+        // 简单的对话功能
+        const chatWindow = document.querySelector('.chat-window');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+
+        function addMessage(content, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', isUser ? 'user-message' : 'ai-message');
+            messageDiv.textContent = content;
+            chatWindow.appendChild(messageDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        sendButton.addEventListener('click', () => {
+            const message = userInput.value.trim();
+            if (message) {
+                addMessage(message, true);
+                userInput.value = '';
+                // 这里可以添加发送消息到后端的逻辑
+                setTimeout(() => {
+                    addMessage("这是一个模拟的AI回复。在实际应用中，您需要连接到后端服务。", false);
+                }, 1000);
+            }
+        });
+
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendButton.click();
+            }
+        });
+    </script>
+</body>
+</html>
